@@ -23,4 +23,17 @@ package lesson01.challenge03;
 
 public class Patisserie {
 
+	public static void main(String[] args) {
+		System.out.println("\n本日のおすすめ商品です。\n");
+		//		エスケープシーケンスで改行
+		int pig1 = 30;
+		int pig2 = 30;
+		int pig3 = 30;
+		//型名　識別子イコールで代入
+		System.out.println("シトロン\\250残り…" + pig1 + "個");
+		System.out.println("ショコラ\\280…残り" + pig2 + "個");
+		System.out.println("ピスターシュ\\320…残り" + pig3 + "個");
+
+	}
+
 }

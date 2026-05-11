@@ -52,34 +52,41 @@ package lesson03.challenge09;
 
 public class Explorer {
 
-    public static void main(String[] args) {
+	public static void main(String[] args) {
 
-        System.out.println("隊長：");
-        System.out.println("間欠泉が10個あるよ気をつけて！\n");
+		System.out.println("隊長：");
+		System.out.println("間欠泉が10個あるよ気をつけて！\n");
+		//変数宣言
+		int geyser = 0;
+		int damage = 0;
+		//繰り返し構文
+		for (int i = 0; i < 10; i++) {
+			//ランダムに０か１
+			geyser = (int) (Math.random() * 10 % 2);
+			//もし0を引いた場合
+			if (geyser == 0) {
+				System.out.println("隊長：");
+				System.out.println((i + 1) + "個目。セーフ");
+				System.out.println("ラッキー！\n");
+				continue;
+			}
 
-        int geyser = 0;
-        int damage = 0;
-        for (int i = 0; i < 10; i++) {
+			//１だった場合
 
-            geyser = (int) (Math.random() * 10 % 2);
+			damage++;
+			System.out.println("隊長：");
+			System.out.println((i + 1) + "個目。熱湯");
+			System.out.println("うわ熱っ！（ダメージ" + damage + "）\n");
 
-
-            //ここにif文、continue文を利用した処理を記述
-
-
-            damage++;
-            System.out.println("隊長：");
-            System.out.println((i + 1) + "個目。熱湯");
-            System.out.println("うわ熱っ！（ダメージ" + damage + "）\n");
-
-            if (damage == 6) {
-                break;
-            }
-        }
-        if (damage != 6) {
-            System.out.println("洞窟の出口にたどり着きました。");
-        } else {
-            System.out.println("探検隊は全滅しました。");
-        }
-    }
+			if (damage == 6) {
+				break;
+			}
+		}
+		//比較演算子６か６ではないか
+		if (damage != 6) {
+			System.out.println("洞窟の出口にたどり着きました。");
+		} else {
+			System.out.println("探検隊は全滅しました。");
+		}
+	}
 }

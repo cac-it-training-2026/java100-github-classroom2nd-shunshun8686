@@ -45,14 +45,17 @@ public class Explorer {
 		System.out.println("探検隊の隊員を5名募集します。\n");
 
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		for (int i = 0; i < 5; i++) {
+
+		}
 
 		//ここにfor文を記述する。
 
-			System.out.print("応募する人の名前を入れてください＞");
+		System.out.print("応募する人の名前を入れてください＞");
 
-			String name = br.readLine();
-			System.out.println("\n隊長：");
-			System.out.println(name + "さん合格！\n");
+		String name = br.readLine();
+		System.out.println("\n隊長：");
+		System.out.println(name + "さん合格！\n");
 
 		//ここに  } を記述する。
 
